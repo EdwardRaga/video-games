@@ -4,9 +4,11 @@ const { API_KEY } = process.env;
 const { Genre, Platform } = require("../db");
 // const {  } = conn.models;
 
+
+//obtener las generos y agregar a la DB
 async function saveApiDataGenres() {
   try {
-    //generos
+    
     const request = await axios.get(
       `https://api.rawg.io/api/genres?key=${API_KEY}`
     );
@@ -19,6 +21,7 @@ async function saveApiDataGenres() {
     console.log(err);
   }
 }
+//obtener las plataformas y agregar a la DB
 async function saveApiDataPlatforms() {
   try {
     //platforms
@@ -37,7 +40,6 @@ async function saveApiDataPlatforms() {
         platforms.push(objPlatform);
       });
     }
-    console.log(platforms);
     await Platform.bulkCreate(platforms);
   } catch (err) {
     console.log(err);

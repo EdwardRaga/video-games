@@ -16,16 +16,12 @@ async function getGameDetail(req,res){
        }else{
         //de lo contrario bucar el la API
         const request = await axios.get(`https://api.rawg.io/api/games/${id}?key=4cb6ed0f83f040d0b51868a8195f2d12`);
-        console.log(request);
+        //respuesta del detail del videojuego
         res.status(201).json(request.data)
-
        }
-        
     }catch(error){
         res.status(400).json({err:error})
     }
-
-
 }
 
 module.exports = getGameDetail;
