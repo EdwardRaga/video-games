@@ -1,5 +1,21 @@
+@font-face {
+  font-family: headlinerno45;
+  src: url('./fonts/HeadlinerNo.45\ DEMO.ttf');
+}
+@font-face {
+  font-family: playfair;
+  src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf');
+  /* src: url('./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf'); */
+}
+
+body{
+  font-family:headlinerno45;
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

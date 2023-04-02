@@ -5,11 +5,11 @@ async function addVideoGame(req, res) {
     //data del video juego recivida por body
 
     const {
-      nombre,
-      descripcion,
-      plataformas,
-      imagen,
-      fechaDeLanzamiento,
+      name,
+      background_image,
+      description,
+      platforms,
+      release,
       rating,
       genres,
     } = req.body;
@@ -18,17 +18,17 @@ async function addVideoGame(req, res) {
    
     //crear el video juego en la db
     const newGame = await Videogame.create({
-      nombre,
-      descripcion,
-      imagen,
-      fechaDeLanzamiento,
+      name,
+      description,
+      background_image,
+      release,
       rating,
     });
     //crear las asociaciones con la tabla intermedia
     // el nuvo juego asocia del modelo Genre los generos pasados por parametros ---> [1,2,30] 
     await newGame.addGenre(genres);
     // el nuvo juego asocia del modelo Platform las plataformas pasados por parametros ---> [1,2,30] 
-    await newGame.addPlatform(plataformas);
+    await newGame.addPlatform(platforms);
 
 
     //prueba traer data de un juego

@@ -12,7 +12,11 @@ module.exports = (sequelize) => {
         allowNull: false,
 
       },
-      nombre: {
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      image_background: {
         type: DataTypes.STRING,
         allowNull: false,
       },

@@ -14,7 +14,10 @@ async function saveApiDataGenres() {
     );
     const genres = request.data.results.map((genre) => ({
       id: genre.id,
-      nombre: genre.name,
+      name: genre.name,
+      image_background:genre.image_background,
+      
+
     }));
     await Genre.bulkCreate(genres);
   } catch (err) {

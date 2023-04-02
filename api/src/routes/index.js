@@ -4,7 +4,7 @@ const { Router } = require('express');
 
 //controllers
 // obtiene los juegos
-const getAllGames = require('../controllers/getAllGames.controller');
+const {getAllGames} = require('../controllers/getAllGames.controller');
 //obtiene los generos
 const getAllGenres = require('../controllers/getAllGenres.controller');
 //agrega un juego

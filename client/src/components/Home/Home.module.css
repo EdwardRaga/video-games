@@ -1,0 +1,75 @@
+body{
+    background-color: #5a5454;
+
+ 
+}
+.wrapper{
+     display: flex;
+     margin: 25px;
+     margin-top: 50px; 
+    }
+    
+    .main{
+        flex: 0 0 70%;
+        background-color: blue;
+    }
+    
+    .aside{ 
+        flex: 0 0 30%;
+        background-color: red;
+       
+        
+    }    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        font-family:playfair;
+        justify-content: center;   
+    }
+
+.filterSection {
+    background-image: linear-gradient(to bottom, #cac9c9, #5a5454); /* Cambiar el primer valor del degradado para hacer el fondo más oscuro */
+    padding: 10px 20px; /* Espacio interior */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    border-bottom: 2px solid black; /* Agregar un borde inferior negro de 3 píxeles */
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);/* Sombra interior y exterior para darle un aspecto 3D */
+    border-radius: 3px;;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .filterLabel {
+
+    color: rgba(255, 255, 255, 0.8); /* Color de texto blanco con un valor de opacidad de 0.8 */
+    font-size: 1rem; /* Tamaño de fuente */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    font-weight: bold; /* Negrita */
+    letter-spacing: 2px; /* Espacio entre letras */
+    display: inline-block; /* Mostrar como un bloque en línea */
+  }
+
+.filter{
+    background-image: linear-gradient(to bottom, #cac9c9, #5a5454); /* Cambiar el primer valor del degradado para hacer el fondo más oscuro */
+    padding: 5px 10px; /* Espacio interior */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    border-bottom: 2px solid black; /* Agregar un borde inferior negro de 3 píxeles */
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);/* Sombra interior y exterior para darle un aspecto 3D */
+    border-radius: 3px;;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+
+    }
+    
+.page{
+    margin: 5px;
+    padding: 20px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:black; 
+}
+

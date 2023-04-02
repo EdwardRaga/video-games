@@ -1,0 +1,11 @@
+.container {
+display: flex;
+justify-content: space-around;
+width: 30%;
+align-items: center;
+background-color:white;
+cursor:pointer;
+}
+.active{
+    color:red
+}

@@ -12,11 +12,11 @@ module.exports = (sequelize) => {
         primaryKey: true
 
       },
-      nombre: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      descripcion: {
+      description: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -24,12 +24,12 @@ module.exports = (sequelize) => {
       //   type: DataTypes.INTEGER,
       //   allowNull: false,
       // },
-      imagen: {
+      background_image: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      fechaDeLanzamiento: {
-        type: DataTypes.DATE,
+      release: {
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       rating: {
