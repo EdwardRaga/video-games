@@ -38,7 +38,7 @@ async function saveApiDataPlatforms() {
         const { id, name } = plarform;
         const objPlatform = {
           id,
-          nombre:name,
+          name,
         };
         platforms.push(objPlatform);
       });

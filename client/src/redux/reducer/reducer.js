@@ -1,14 +1,15 @@
-import { GET_GAMES, SEARCH_GAME, FILTERS,GET_GENRES } from "../action/action";
+import { GET_GAMES, SEARCH_GAME, FILTERS,GET_GENRES, GET_PLATFORMS } from "../action/action";
 
 const initialState = {
   videogames: [],
   copygames:[], // copia de video juegos, filtrados.
-  genres:[]
+  genres:[],
+  platforms:[]
 
 };
 
 const rootReducer = (state = initialState, action) => {
-  console.log(action);
+  // console.log(action);
   switch (action.type) {
     //obtener todos los juegos
     case GET_GAMES:
@@ -22,6 +23,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         genres:[...action.payload]
+      };
+    //obtener todos las plataformas
+    case GET_PLATFORMS:
+      return {
+        ...state,
+        platforms:[...action.payload]
       };
 
     //buscar juegos por nombre

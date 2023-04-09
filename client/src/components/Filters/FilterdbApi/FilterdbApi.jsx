@@ -4,6 +4,10 @@ import filter from "./FilterdbApi";
 import { filters, getGames } from "../../../redux/action/action";
 import { useSelector,useDispatch } from "react-redux";
 
+//icons
+import { faFilter} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default function FilterdbApi() {
   //api 
@@ -19,9 +23,7 @@ export default function FilterdbApi() {
 
     if(filter(state,target) === 'allgames'){
       dispatch(getGames())
-
     }
-
     else{
       dispatch(filters(filter(state,target)))
     }
@@ -33,13 +35,12 @@ export default function FilterdbApi() {
 
   return (
     <div>
-      <label>Filter By:</label>
-      <select onChange={handleSelect} id="filtro" name="filtro">
+        <select onChange={handleSelect} id="filtro" name="filtro">
         <option value="allgames" defaultValue>All games</option>
         <option value="database">
-          database
+        Database
         </option>
-        <option value="api">API</option>
+        <option value="api">Api</option>
       </select>
     </div>
   );

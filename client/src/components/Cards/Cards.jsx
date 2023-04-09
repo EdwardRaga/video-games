@@ -5,6 +5,8 @@ import Card from "../Card/Card";
 
 export default function Cards(props) {
   const { paginate } = props;
+
+  
   
   // useEffect(() => {
   //   getGames();
@@ -21,17 +23,3 @@ export default function Cards(props) {
   )
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     // videogames: state.videogames,
-//     paginate: state.paginate,
-//   };
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     getGames: () => dispatch(getGames()),
-//   };
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Cards);

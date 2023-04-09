@@ -4,6 +4,7 @@
     justify-content:space-around;
     align-items: center;
     font-size: 18px;
+    font-family: headlinerno45;
 }
 .navbar a{
     text-decoration:none;
@@ -12,7 +13,7 @@
 }
 
 .logo a{
-    color: azure;
+    color: white;
     font-size: 2rem;
     letter-spacing: 8px;
 }
@@ -20,10 +21,11 @@
 .links{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .links ul {
+  
     list-style: none;
     display: flex;
     
@@ -74,8 +76,13 @@
   }
 
   /* CSSbind*/
+
+  .logo:hover{
+    animation: linkAnimation 13s;
+
+  }
   .links ul li:hover {
-    animation: linkAnimation 1s;
+    animation: linkAnimation 13s;
 }
 
 @keyframes linkAnimation {

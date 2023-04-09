@@ -48,7 +48,6 @@ const getAllGames =  async(req, res) => {
         }
       }
     });
-
    const games  = videogames.concat(videoGamesdb)
 
    console.log(games.length);

@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { getGenres, filters } from "../../../redux/action/action";
 import filter from "./filter";
 
+
+import {faGamepad} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const FilterGenre = () => {
   const state = useSelector((state) => state);
 
@@ -22,7 +26,6 @@ const FilterGenre = () => {
 
   return (
     <div>
-      <label>Filter By Genre:</label>
       <select onChange={(e) => handleSelect(e)}>
         {state?.genres.map((genre) => {
           return (

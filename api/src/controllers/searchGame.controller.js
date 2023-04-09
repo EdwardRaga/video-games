@@ -57,12 +57,7 @@ async function searchGame(req, res) {
      let allGames = result.concat(requestDb);
   
      if (allGames.length === 0) {
-          res
-            .status(404)
-            .json({
-              message:
-                "No se encontraron videojuegos con el término de búsqueda proporcionado",
-            });
+           throw new Error("No se encontraron videojuegos con el término de búsqueda proporcionado");
         } else {
           if (allGames.length > 15) allGames = allGames.slice(0, 15);
 
@@ -88,8 +83,7 @@ async function searchGame(req, res) {
     // });
     // res.status(201).json(requestaPi.data.results);
   } catch (err) {
-    
-    res.status(404).json({ message: err.message });
+   res.status(400).json({ message: err.message });
   }
 }
 

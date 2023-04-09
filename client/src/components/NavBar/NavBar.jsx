@@ -5,7 +5,7 @@ import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 
 //iconos
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch,faGamepad, faHome,faCogs, faBriefcase} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar() {
@@ -44,25 +44,30 @@ function Navbar() {
       <div className={styles.links}>
         <ul>
           <li>
-            <Link to={"/home"}>Home</Link>
+            <Link to={"/home"}><FontAwesomeIcon
+            icon={ faHome}
+            style={{ color: "white" }}
+          /> Home</Link>
           </li>
           <li>
-            <Link to={"/addgame"}>AddGame</Link>
+        
+            <Link to={"/addgame"}><FontAwesomeIcon
+            icon={faGamepad}
+            style={{ color: "white" }}
+          /> Add game</Link>
           </li>
         </ul>
-        <div className={styles.search}>
+        {/* <div className={styles.search}>
           <input
             onChange={handleSearcheChange}
             name={"name"}
             type="text"
             placeholder="search"
           />
-          <FontAwesomeIcon
-            icon={faSearch}
+          <FontAwesomeIcon icon={faSearch}
             className={styles.searchIcon}
-            style={{ color: "white" }}
-          />
-        </div>
+            style={{ color: "white" }}/>
+        </div> */}
       </div>
     </nav>
   );
