@@ -20,6 +20,10 @@ export default function FilterName({setError}) {
       dispatch(getGames())
       setError(null)
     }
+    else{
+      dispatch(searchGame(searchName.name))
+
+    }
   },[searchName])
 
   const handleSearcheChange =  (event) => {
@@ -31,11 +35,6 @@ export default function FilterName({setError}) {
       ...searchName,
       [target]: value,
     });
-
-    if (searchGame.name.length > 1) {
-      dispatch(searchGame(searchName.name))
-      .then(null, (error)=> setError('No video games were found with the provided search term.') )
-    } 
   };
   return (
     <div className={style.search}>
