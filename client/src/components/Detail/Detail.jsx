@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import style from "./Detail.module.css";
 import Loading from "../Loading/Loading";
+import { Link, useHistory } from "react-router-dom";
 
 //icons
-import { faSortAlphaUp, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faSortAlphaUp, faStar, faBackward } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Detail() {
@@ -13,10 +14,13 @@ export default function Detail() {
   //hacer una request al back con el id params
   //setear estado local
 
+
   //State
   const [game, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
   const [rating, setRating] = useState(null);
+
+  const history = useHistory()
 
   //id videogame
   const params = useParams();
@@ -29,10 +33,28 @@ export default function Detail() {
     });
   }, []);
 
+
+  const handleClickBack = (event)=>{
+    event.preventDefault()
+    history.goBack()
+
+  }
+
+
+
+
+
   return (
     <>
+    {!loading && history && (
+      <div className={style.goback}>
+      <Link onClick={handleClickBack} id={style.icon}> <FontAwesomeIcon  icon= {faBackward}/>Go Back</Link>
+        </div>
+    )}
+
       {loading && <Loading />}
       {!loading && (
+        
         <div className={style.container}>
           <h1>{game.name}</h1>
           <div>

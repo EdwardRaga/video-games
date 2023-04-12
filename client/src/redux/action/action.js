@@ -32,7 +32,7 @@ export function getGenres() {
       console.log(e);
     }
   };
-}
+} 
 //OBTENER PLATAFORMAS
 export function getPlaforms() {
   return async function (dispatch) {
@@ -55,10 +55,8 @@ export function searchGame(name) {
         `http://localhost:3001/videogames/games/search?name=${name}`
       );
       let data = await response.json();
-      // console.log(response)
-    dispatch({ type: SEARCH_GAME, payload: data });
+     dispatch({ type: SEARCH_GAME, payload: data });
     } catch (error) {
-      // console.log(error);
       throw (error);
     }
   };

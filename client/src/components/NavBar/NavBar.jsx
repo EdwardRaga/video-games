@@ -9,37 +9,12 @@ import { faSearch,faGamepad, faHome,faCogs, faBriefcase} from "@fortawesome/free
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar() {
-  const [searchName, setsearchName] = useState({ name: "" });
-  const dispatch = useDispatch();
-
-  useEffect(()=>{
-    if(searchName.name.length === 0){
-      dispatch(getGames())
-    }
-  },[searchName])
-
-  const handleSearcheChange = (event) => {
-    let target = event.target.name;
-    let value = event.target.value;
-
-
-    setsearchName({
-      ...searchName,
-      [target]: value,
-    });
-
-    if (searchGame.name.length > 1) {
-      dispatch(searchGame(searchName.name));
-    } 
-  };
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link to={"/home"}>
           <h1>PlayNation</h1>
         </Link>
-        {/* <img src="logo.png" alt="logo" /> */}
       </div>
       <div className={styles.links}>
         <ul>
@@ -50,24 +25,12 @@ function Navbar() {
           /> Home</Link>
           </li>
           <li>
-        
             <Link to={"/addgame"}><FontAwesomeIcon
             icon={faGamepad}
             style={{ color: "white" }}
           /> Add game</Link>
           </li>
         </ul>
-        {/* <div className={styles.search}>
-          <input
-            onChange={handleSearcheChange}
-            name={"name"}
-            type="text"
-            placeholder="search"
-          />
-          <FontAwesomeIcon icon={faSearch}
-            className={styles.searchIcon}
-            style={{ color: "white" }}/>
-        </div> */}
       </div>
     </nav>
   );

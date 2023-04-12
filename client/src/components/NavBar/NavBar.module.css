@@ -3,77 +3,72 @@
     display: flex;
     justify-content:space-around;
     align-items: center;
-    font-size: 18px;
     font-family: headlinerno45;
+    /* border: 5px solid blue; */
+    /* padding:px; */
+    flex-wrap: wrap;
 }
 .navbar a{
     text-decoration:none;
     color: #f5f5f5;
+
     
 }
 
-.logo a{
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 8px;
-}
-
-.links{
+.logo{
+  
+  /* background-color: aqua; */
+    width: 100%;
+  color: white;
+    /* background-color: aqua; */
+  font-size: 2rem;
+  letter-spacing: 8px;
+  height: 80px;
+    /* border: 1px solid blueviolet; */
+    /* background-color: coral; */
+  animation-name: float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+    
+  }
+.logo a {
+background-color: #1C1C1C; 
+    
+  }
+  
+  .links{
+    /* background-color: aqua; */
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
 }
 
 .links ul {
-  
-    list-style: none;
-    display: flex;
-    
-    
-    
-    /* padding: 0; */ 
+  width: 100%;
+  list-style: none;
+  /* background-color: blue; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
     
 }
 .links ul li{
     letter-spacing: 1px;
     font-size: 1.5rem;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     color: aliceblue;
+    /* background-color:aquamarine; */
 }
 
 
-.search {
-    position: relative;
-  }
-  
-  .search input[type="text"] {
-    
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    background-image: linear-gradient(to bottom, rgba(255, 165, 0, 0.8), rgba(255, 165, 0, 0.5));
-    color: white;
-    font-size: 16px;
-    width: 200px;
-    transition: all 0.3s;
-  }
-  
-  .search input[type="text"]:focus {
-    width: 500px;
-    outline: none;
-  }
-  
-  .search input[type="text"]::placeholder {
-    color: white;
-  }
-  
-  .searchIcon{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    
-  }
 
   /* CSSbind*/
 
@@ -88,4 +83,17 @@
 @keyframes linkAnimation {
     from { transform: scale(1); }
     to { transform: scale(1.2); }
+}
+
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-5px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }

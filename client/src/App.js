@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Form from './components/Form/Form';
 import Detail from './components/Detail/Detail';
 import Landing from './components/Landing/Landing';
+import Footer from './components/Footer/Footer';
 import { Route, useLocation} from 'react-router-dom';
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
      <Route path={"/home"} component={Home}/>
      <Route exact path={"/addgame"} component={Form}/>
      <Route exact path={"/detail/:id"} component={Detail}/>
+     {location.pathname !== '/' && <Footer/>}
      
      
     </div>

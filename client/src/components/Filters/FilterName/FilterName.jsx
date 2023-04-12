@@ -21,7 +21,9 @@ export default function FilterName({setError}) {
       setError(null)
     }
     else{
-      dispatch(searchGame(searchName.name))
+    setError(null)
+    dispatch(searchGame(searchName.name))
+    .then(null, (error)=> setError('No video games were found with the provided search term.'))
 
     }
   },[searchName])

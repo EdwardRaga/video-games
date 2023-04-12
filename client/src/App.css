@@ -8,14 +8,18 @@
   /* src: url('./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf'); */
 }
 
-body{
+
+body,html{
+  height: 100vh;
   font-family:playfair;
-  /* height: 100vh; */
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
-  
+  /* background-color: #61dafb; */
 }
 
 .App-logo {

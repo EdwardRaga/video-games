@@ -131,16 +131,17 @@ export default function Form() {
           encType="multipart/form-data"
         >
           <div className={style.name}>
-            <label>Name</label>
+            <label>Name*</label>
             <input
               onChange={handleChange}
               name={"name"}
               type="text"
               value={input.name}
-              required
+              id={error?.name ? style.error : null }
             />
           </div>
-          {error && error?.name}
+          {error && <p id={style.error}>{error?.name}</p>}
+          
 
           <div className={style.background_image}>
             <label>Image</label>
@@ -149,9 +150,9 @@ export default function Form() {
               accept="image/*"
               name={"background_image"}
               type="file"
-            />
+              />
           </div>
-            {error && error?.background_image}
+            {error && <p id={style.error}>{error?.name}</p> }
 
           <div className={style.description}>
             <label>Description</label>
@@ -190,8 +191,7 @@ export default function Form() {
               onChange={handleChange}
               name={"release"}
               type="date"
-              required
-              oninvalid="this.setCustomValidity('User ID is a must')"
+              
               />
           </div>
           {error && error?.release}

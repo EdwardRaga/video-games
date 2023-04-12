@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     setPaginate(videogames.slice(0, 15));
 
-    if (paginate?.length > 1) {
+    if(paginate) {
       setLanding(false);
     }
   }, [videogames]);
@@ -48,10 +48,15 @@ export default function Home() {
             </div>
             {!error && (
               <div className={style.filters}>
+                <div className={style.select}>
                 <FilterGenre />
                 <FilterdbApi />
+                </div>
+                <div className={style.botones}>
                 <FilterRating />
                 <FilterAZ />
+                </div>
+                
               </div>
             )}
           </div>
